@@ -233,6 +233,47 @@
             border-color: rgba(0, 240, 255, 0.3);
             transform: translateX(10px);
         }
+
+        .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .gallery-item {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        text-decoration: none;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;  /* Use "contain" if needed */
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.03);
+    }
+
+    .gallery-caption {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        font-size: 0.9rem;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-family: sans-serif;
+    }
+
         
         /* Hero Section */
         .hero {
@@ -352,7 +393,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: conic-gradient(from 0deg, transparent, #00f0ff, transparent);
+            background: conic-gradient(from 0deg, transparent, #2006e3, transparent);
             animation: rotate 4s linear infinite;
             z-index: -1;
         }
@@ -373,9 +414,6 @@
             box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
         }
         
-        .teacher-img:hover {
-            transform: rotateY(360deg);
-        }
         
         .quote {
             font-style: italic;
