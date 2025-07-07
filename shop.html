@@ -477,12 +477,11 @@
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <a href="#" class="logo">सुर साधना Shop</a>
+            <a href="#" class="logo">Saraswati Music Shop</a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#guitars">Guitars</a></li>
-                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -523,7 +522,6 @@
             <div class="product-price">₹25,000</div>
             <div class="product-buttons">
                 <button class="btn btn-primary" onclick="addToCart('Yamaha FG830', 25000, 'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400&h=250&fit=crop')">Add to Cart</button>
-                <button class="btn btn-secondary">View Details</button>
             </div>
         </div>
         
@@ -534,7 +532,6 @@
             <div class="product-price">₹85,000</div>
             <div class="product-buttons">
                 <button class="btn btn-primary" onclick="addToCart('Taylor 814ce', 85000, 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=250&fit=crop')">Add to Cart</button>
-                <button class="btn btn-secondary">View Details</button>
             </div>
         </div>
         
@@ -546,7 +543,6 @@
             <div class="product-price">₹45,000</div>
             <div class="product-buttons">
                 <button class="btn btn-primary" onclick="addToCart('Fender Stratocaster', 45000, 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop')">Add to Cart</button>
-                <button class="btn btn-secondary">View Details</button>
             </div>
         </div>
         
@@ -557,7 +553,6 @@
             <div class="product-price">₹95,000</div>
             <div class="product-buttons">
                 <button class="btn btn-primary" onclick="addToCart('Gibson Les Paul', 95000, 'https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400&h=250&fit=crop')">Add to Cart</button>
-                <button class="btn btn-secondary">View Details</button>
             </div>
         </div>
         
@@ -569,7 +564,6 @@
             <div class="product-price">₹35,000</div>
             <div class="product-buttons">
                 <button class="btn btn-primary" onclick="addToCart('Cordoba C9', 35000, 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop')">Add to Cart</button>
-                <button class="btn btn-secondary">View Details</button>
             </div>
         </div>
         
@@ -580,7 +574,6 @@
             <div class="product-price">₹55,000</div>
             <div class="product-buttons">
                 <button class="btn btn-primary" onclick="addToCart('Alhambra 4P', 55000, 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop')">Add to Cart</button>
-                <button class="btn btn-secondary">View Details</button>
             </div>
         </div>
         
@@ -592,7 +585,6 @@
             <div class="product-price">₹52,000</div>
             <div class="product-buttons">
                 <button class="btn btn-primary" onclick="addToCart('Fender Jazz Bass', 52000, 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop')">Add to Cart</button>
-                <button class="btn btn-secondary">View Details</button>
             </div>
         </div>
         
@@ -603,7 +595,6 @@
             <div class="product-price">₹78,000</div>
             <div class="product-buttons">
                 <button class="btn btn-primary" onclick="addToCart('Music Man StingRay', 78000, 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop')">Add to Cart</button>
-                <button class="btn btn-secondary">View Details</button>
             </div>
         </div>
     </section>
@@ -622,384 +613,8 @@
             <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
         </div>
     </div>
-    
-    <script>
-        // Particle animation
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            for (let i = 0; i < 30; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 8 + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
+    <script src="shop.js">
         
-        // Cart functionality
-        let cart = [];
-        
-        function addToCart(name, price, image) {
-            const existingItem = cart.find(item => item.name === name);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({
-                    name: name,
-                    price: price,
-                    image: image,
-                    quantity: 1
-                });
-            }
-            updateCart();
-            showCartNotification();
-        }
-        
-        function updateCart() {
-            const cartCount = document.getElementById('cart-count');
-            const cartItems = document.getElementById('cart-items');
-            const totalAmount = document.getElementById('total-amount');
-            
-            // Update cart count
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            cartCount.textContent = totalItems;
-            
-            // Update cart items
-            if (cart.length === 0) {
-                cartItems.innerHTML = '<p style="text-align: center; color: #cccccc; margin-top: 50px;">Your cart is empty</p>';
-                totalAmount.textContent = '0';
-            } else {
-                cartItems.innerHTML = cart.map(item => `
-                    <div class="cart-item">
-                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                        <div class="cart-item-details">
-                            <div class="cart-item-name">${item.name}</div>
-                            <div class="cart-item-price">₹${item.price.toLocaleString()} x ${item.quantity}</div>
-                        </div>
-                    </div>
-                `).join('');
-                
-                const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-                totalAmount.textContent = total.toLocaleString();
-            }
-        }
-        
-        function toggleCart() {
-            const cartSidebar = document.getElementById('cart-sidebar');
-            cartSidebar.classList.toggle('open');
-        }
-        
-        function checkout() {
-            if (cart.length === 0) {
-                alert('Your cart is empty!');
-                return;
-            }
-            
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            alert(`Thank you for your order! Total: ₹${total.toLocaleString()}\n\nYou will be redirected to payment gateway.`);
-            
-            // Clear cart after checkout
-            cart = [];
-            updateCart();
-            toggleCart();
-        }
-        
-        function showCartNotification() {
-            // Create a temporary notification
-            const notification = document.createElement('div');
-            notification.innerHTML = 'Added to cart! 🎸';
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: linear-gradient(45deg, #00f0ff, #ff6b6b);
-                color: white;
-                padding: 15px 20px;
-                border-radius: 25px;
-                font-weight: 700;
-                z-index: 3000;
-                animation: slideIn 0.3s ease;
-            `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 2000);
-        }
-        
-        // Filter functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const productCards = document.querySelectorAll('.product-card');
-        
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                const filterValue = button.getAttribute('data-filter');
-                
-                productCards.forEach(card => {
-                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'block';
-                        card.style.animation = 'fadeIn 0.5s ease';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
-        // Initialize
-        createParticles();
-        updateCart();
-        
-        // Add CSS animations
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateX(100%); opacity: // Continuing from where the CSS animations were left off...
-
-0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            
-            @keyframes slideOut {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-            
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(20px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        `;
-        document.head.appendChild(style);
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Close cart when clicking outside
-        document.addEventListener('click', function(e) {
-            const cartSidebar = document.getElementById('cart-sidebar');
-            const cartIcon = document.querySelector('.cart-icon');
-            
-            if (!cartSidebar.contains(e.target) && !cartIcon.contains(e.target)) {
-                cartSidebar.classList.remove('open');
-            }
-        });
-        
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(10, 10, 10, 0.98)';
-                header.style.boxShadow = '0 5px 20px rgba(0, 240, 255, 0.2)';
-            } else {
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
-                header.style.boxShadow = 'none';
-            }
-        });
-        
-        // Product card hover effects
-        const productCards = document.querySelectorAll('.product-card');
-        productCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-        
-        // Add loading animation for images
-        const productImages = document.querySelectorAll('.product-image');
-        productImages.forEach(img => {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-            });
-            
-            img.addEventListener('error', function() {
-                this.src = 'https://via.placeholder.com/400x250/1a1a2e/00f0ff?text=Guitar+Image';
-            });
-        });
-        
-        // Keyboard navigation for cart
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                const cartSidebar = document.getElementById('cart-sidebar');
-                cartSidebar.classList.remove('open');
-            }
-        });
-        
-        // Add to cart with animation
-        function addToCartWithAnimation(button) {
-            const originalText = button.textContent;
-            button.textContent = '✓ Added!';
-            button.style.background = 'linear-gradient(45deg, #00ff00, #00cc00)';
-            
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.style.background = 'linear-gradient(45deg, #00f0ff, #ff6b6b)';
-            }, 1500);
-        }
-        
-        // Enhanced addToCart function with animation
-        const originalAddToCart = addToCart;
-        addToCart = function(name, price, image) {
-            originalAddToCart(name, price, image);
-            
-            // Find the button that was clicked and animate it
-            const buttons = document.querySelectorAll('.btn-primary');
-            buttons.forEach(button => {
-                if (button.onclick && button.onclick.toString().includes(name)) {
-                    addToCartWithAnimation(button);
-                }
-            });
-        };
-        
-        // Initialize intersection observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeIn 0.8s ease forwards';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all product cards
-        productCards.forEach(card => {
-            observer.observe(card);
-        });
-        
-        // Mobile menu toggle (if needed)
-        function toggleMobileMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('mobile-open');
-        }
-        
-        // Add search functionality (basic)
-        function searchProducts(query) {
-            const searchTerm = query.toLowerCase();
-            productCards.forEach(card => {
-                const productName = card.querySelector('.product-name').textContent.toLowerCase();
-                const productDesc = card.querySelector('.product-description').textContent.toLowerCase();
-                
-                if (productName.includes(searchTerm) || productDesc.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-        
-        // Add price range filter
-        function filterByPrice(minPrice, maxPrice) {
-            productCards.forEach(card => {
-                const priceText = card.querySelector('.product-price').textContent;
-                const price = parseInt(priceText.replace(/[^\d]/g, ''));
-                
-                if (price >= minPrice && price <= maxPrice) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-        
-        // Initialize everything when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add fade-in effect to hero section
-            const hero = document.querySelector('.hero');
-            hero.style.animation = 'fadeIn 1s ease';
-            
-            // Stagger animation for filter buttons
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            filterBtns.forEach((btn, index) => {
-                btn.style.animation = `fadeIn 0.5s ease ${index * 0.1}s forwards`;
-                btn.style.opacity = '0';
-            });
-        });
-        
-        // Add custom cursor effect for interactive elements
-        const interactiveElements = document.querySelectorAll('.btn, .filter-btn, .cart-icon, .nav-links a');
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', function() {
-                document.body.style.cursor = 'pointer';
-            });
-            
-            element.addEventListener('mouseleave', function() {
-                document.body.style.cursor = 'default';
-            });
-        });
-        
-        // Add ripple effect to buttons
-        function createRipple(event) {
-            const button = event.currentTarget;
-            const ripple = document.createElement('span');
-            const rect = button.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = event.clientX - rect.left - size / 2;
-            const y = event.clientY - rect.top - size / 2;
-            
-            ripple.style.cssText = `
-                position: absolute;
-                width: ${size}px;
-                height: ${size}px;
-                left: ${x}px;
-                top: ${y}px;
-                background: rgba(255, 255, 255, 0.3);
-                border-radius: 50%;
-                transform: scale(0);
-                animation: ripple 0.6s ease-out;
-                pointer-events: none;
-            `;
-            
-            button.style.position = 'relative';
-            button.style.overflow = 'hidden';
-            button.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        }
-        
-        // Add ripple effect to all buttons
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', createRipple);
-        });
-        
-        // Add ripple animation to CSS
-        const rippleStyle = document.createElement('style');
-        rippleStyle.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(rippleStyle);
+    </script>
+</body>
+</html>
