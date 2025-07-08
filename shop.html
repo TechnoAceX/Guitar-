@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sur Sadhna Guitar Shop - Premium Guitars</title>
+    <title>Saraswati Music Shop - Indian Musical Instruments</title>
     <link rel="stylesheet" href="shop.css" />
 </head>
 <body>
+
     <!-- Background particles -->
     <div class="bg-particles" id="particles"></div>
     
@@ -25,8 +26,8 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Premium Guitar Collection</h1>
-            <p>Discover the perfect guitar for your musical journey</p>
+            <h1>Premium Indian Musical Instruments</h1>
+            <p>Discover the perfect instrument for your musical journey</p>
             <p>Quality instruments for every level and style</p>
         </div>
     </section>
@@ -34,97 +35,169 @@
     <!-- Filter Section -->
     <section class="filter-section">
         <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All Guitars</button>
-            <button class="filter-btn" data-filter="acoustic">Acoustic</button>
-            <button class="filter-btn" data-filter="electric">Electric</button>
-            <button class="filter-btn" data-filter="classical">Classical</button>
-            <button class="filter-btn" data-filter="bass">Bass</button>
+            <button class="filter-btn active" data-filter="all">All Instruments</button>
+            <button class="filter-btn" data-filter="guitar">Guitar</button>
+            <button class="filter-btn" data-filter="piano">Piano</button>
+            <button class="filter-btn" data-filter="harmonium">Harmonium</button>
+            <button class="filter-btn" data-filter="tabla">Tabla</button>
+            <button class="filter-btn" data-filter="speaker">Speaker & Mic</button>
         </div>
     </section>
     
     <!-- Products Grid -->
-    <section class="products-grid" id="guitars">
-        <!-- Acoustic Guitars -->
-        <div class="product-card" data-category="acoustic">
-            <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400&h=250&fit=crop" alt="Yamaha FG830" class="product-image">
-            <h3 class="product-name">Yamaha FG830</h3>
+    <section class="products-grid" id="instruments">
+        <!-- Guitar Section -->
+        <div class="product-card" data-category="guitar">
+            <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400&h=250&fit=crop" alt="Yamaha F310" class="product-image">
+            <h3 class="product-name">Yamaha F310</h3>
             <p class="product-description">Solid spruce top acoustic guitar with rosewood back and sides. Perfect for beginners and professionals alike.</p>
-            <div class="product-price">₹25,000</div>
+            <div class="product-price">₹8,500</div>
             <div class="product-buttons">
-                <button class="btn btn-primary" onclick="addToCart('Yamaha FG830', 25000, 'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400&h=250&fit=crop')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="addToCart('Yamaha F310', 8500, 'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400&h=250&fit=crop')">Add to Cart</button>
             </div>
         </div>
         
-        <div class="product-card" data-category="acoustic">
-            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=250&fit=crop" alt="Taylor 814ce" class="product-image">
-            <h3 class="product-name">Taylor 814ce</h3>
-            <p class="product-description">Premium acoustic-electric guitar with Indian rosewood back and sides. Built-in electronics for stage performance.</p>
-            <div class="product-price">₹85,000</div>
+        <div class="product-card" data-category="guitar">
+            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=250&fit=crop" alt="Fender CD-60S" class="product-image">
+            <h3 class="product-name">Fender CD-60S</h3>
+            <p class="product-description">Dreadnought acoustic guitar with solid spruce top and mahogany back. Great for strumming and fingerpicking.</p>
+            <div class="product-price">₹12,000</div>
             <div class="product-buttons">
-                <button class="btn btn-primary" onclick="addToCart('Taylor 814ce', 85000, 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=250&fit=crop')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="addToCart('Fender CD-60S', 12000, 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=250&fit=crop')">Add to Cart</button>
             </div>
         </div>
         
-        <!-- Electric Guitars -->
-        <div class="product-card" data-category="electric">
-            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Fender Stratocaster" class="product-image">
-            <h3 class="product-name">Fender Stratocaster</h3>
-            <p class="product-description">Iconic electric guitar with three single-coil pickups. The legendary sound that defined rock and blues.</p>
-            <div class="product-price">₹45,000</div>
+        <div class="product-card" data-category="guitar">
+            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop" alt="Kadence Slowhand" class="product-image">
+            <h3 class="product-name">Kadence Slowhand</h3>
+            <p class="product-description">Professional acoustic guitar with solid cedar top and Indian rosewood back. Handcrafted in India.</p>
+            <div class="product-price">₹15,500</div>
             <div class="product-buttons">
-                <button class="btn btn-primary" onclick="addToCart('Fender Stratocaster', 45000, 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="addToCart('Kadence Slowhand', 15500, 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop')">Add to Cart</button>
             </div>
         </div>
         
-        <div class="product-card" data-category="electric">
-            <img src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400&h=250&fit=crop" alt="Gibson Les Paul" class="product-image">
-            <h3 class="product-name">Gibson Les Paul</h3>
-            <p class="product-description">Premium electric guitar with mahogany body and maple cap. Dual humbuckers for rich, warm tone.</p>
-            <div class="product-price">₹95,000</div>
+        <!-- Piano Section -->
+        <div class="product-card" data-category="piano">
+            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop" alt="Casio CTK-3500" class="product-image">
+            <h3 class="product-name">Casio CTK-3500</h3>
+            <p class="product-description">61-key electronic keyboard with 400 tones and 77 rhythms. Perfect for beginners and home practice.</p>
+            <div class="product-price">₹8,999</div>
             <div class="product-buttons">
-                <button class="btn btn-primary" onclick="addToCart('Gibson Les Paul', 95000, 'https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400&h=250&fit=crop')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="addToCart('Casio CTK-3500', 8999, 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop')">Add to Cart</button>
             </div>
         </div>
         
-        <!-- Classical Guitars -->
-        <div class="product-card" data-category="classical">
-            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop" alt="Cordoba C9" class="product-image">
-            <h3 class="product-name">Cordoba C9</h3>
-            <p class="product-description">Solid cedar top classical guitar with mahogany back and sides. Ideal for classical and flamenco music.</p>
-            <div class="product-price">₹35,000</div>
+        <div class="product-card" data-category="piano">
+            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop" alt="Yamaha PSR-I500" class="product-image">
+            <h3 class="product-name">Yamaha PSR-I500</h3>
+            <p class="product-description">61-key portable keyboard with Indian voices and styles. Features tabla, sitar, and other traditional sounds.</p>
+            <div class="product-price">₹16,500</div>
             <div class="product-buttons">
-                <button class="btn btn-primary" onclick="addToCart('Cordoba C9', 35000, 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="addToCart('Yamaha PSR-I500', 16500, 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop')">Add to Cart</button>
             </div>
         </div>
         
-        <div class="product-card" data-category="classical">
-            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop" alt="Alhambra 4P" class="product-image">
-            <h3 class="product-name">Alhambra 4P</h3>
-            <p class="product-description">Handcrafted Spanish classical guitar with solid cedar top and Indian rosewood back. Concert-quality instrument.</p>
-            <div class="product-price">₹55,000</div>
+        <div class="product-card" data-category="piano">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="Roland E-X20" class="product-image">
+            <h3 class="product-name">Roland E-X20</h3>
+            <p class="product-description">61-key arranger keyboard with over 700 sounds and 200 styles. Built-in speakers and recording capability.</p>
+            <div class="product-price">₹24,000</div>
             <div class="product-buttons">
-                <button class="btn btn-primary" onclick="addToCart('Alhambra 4P', 55000, 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="addToCart('Roland E-X20', 24000, 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop')">Add to Cart</button>
             </div>
         </div>
         
-        <!-- Bass Guitars -->
-        <div class="product-card" data-category="bass">
-            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop" alt="Fender Jazz Bass" class="product-image">
-            <h3 class="product-name">Fender Jazz Bass</h3>
-            <p class="product-description">Classic 4-string bass guitar with dual single-coil pickups. Versatile instrument for all music styles.</p>
-            <div class="product-price">₹52,000</div>
+        <!-- Harmonium Section -->
+        <div class="product-card" data-category="harmonium">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Bina 23B" class="product-image">
+            <h3 class="product-name">Bina 23B</h3>
+            <p class="product-description">Traditional folding harmonium with 42 keys and 2 sets of reeds. Perfect for Indian classical music and bhajans.</p>
+            <div class="product-price">₹4,500</div>
             <div class="product-buttons">
-                <button class="btn btn-primary" onclick="addToCart('Fender Jazz Bass', 52000, 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="addToCart('Bina 23B', 4500, 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop')">Add to Cart</button>
             </div>
         </div>
         
-        <div class="product-card" data-category="bass">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="Music Man StingRay" class="product-image">
-            <h3 class="product-name">Music Man StingRay</h3>
-            <p class="product-description">High-end bass guitar with active electronics and distinctive tone. Favored by professional musicians worldwide.</p>
-            <div class="product-price">₹78,000</div>
+        <div class="product-card" data-category="harmonium">
+            <img src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400&h=250&fit=crop" alt="Maharaja Musicals PDI-BHG" class="product-image">
+            <h3 class="product-name">Maharaja Musicals PDI-BHG</h3>
+            <p class="product-description">Premium harmonium with 39 keys, 3 sets of reeds, and coupler. Excellent for professional performances.</p>
+            <div class="product-price">₹8,999</div>
             <div class="product-buttons">
-                <button class="btn btn-primary" onclick="addToCart('Music Man StingRay', 78000, 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="addToCart('Maharaja Musicals PDI-BHG', 8999, 'https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400&h=250&fit=crop')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="harmonium">
+            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop" alt="Paloma 432" class="product-image">
+            <h3 class="product-name">Paloma 432</h3>
+            <p class="product-description">Deluxe harmonium with 42 keys, scale changing facility, and high-quality reeds. Handcrafted in India.</p>
+            <div class="product-price">₹12,500</div>
+            <div class="product-buttons">
+                <button class="btn btn-primary" onclick="addToCart('Paloma 432', 12500, 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Tabla Section -->
+        <div class="product-card" data-category="tabla">
+            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop" alt="Maharaja Musicals Delhi Tabla" class="product-image">
+            <h3 class="product-name">Maharaja Musicals Delhi Tabla</h3>
+            <p class="product-description">Professional tabla set with sheesham wood dayan and brass bayan. Perfect for learning and performance.</p>
+            <div class="product-price">₹3,999</div>
+            <div class="product-buttons">
+                <button class="btn btn-primary" onclick="addToCart('Maharaja Musicals Delhi Tabla', 3999, 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="tabla">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="Meinl Tabla Set" class="product-image">
+            <h3 class="product-name">Meinl Tabla Set</h3>
+            <p class="product-description">Concert quality tabla set with goat skin heads and premium wood construction. Includes tuning hammer.</p>
+            <div class="product-price">₹6,500</div>
+            <div class="product-buttons">
+                <button class="btn btn-primary" onclick="addToCart('Meinl Tabla Set', 6500, 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="tabla">
+            <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400&h=250&fit=crop" alt="Bina Tabla 2 Kg" class="product-image">
+            <h3 class="product-name">Bina Tabla 2 Kg</h3>
+            <p class="product-description">Traditional tabla set with copper bayan and wooden dayan. Hand-tuned for authentic Indian classical sound.</p>
+            <div class="product-price">₹8,999</div>
+            <div class="product-buttons">
+                <button class="btn btn-primary" onclick="addToCart('Bina Tabla 2 Kg', 8999, 'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400&h=250&fit=crop')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Speaker & Mic Section -->
+        <div class="product-card" data-category="speaker">
+            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=250&fit=crop" alt="Ahuja SPA-1000DP" class="product-image">
+            <h3 class="product-name">Ahuja SPA-1000DP</h3>
+            <p class="product-description">100W portable PA system with wireless mic, USB, SD card support. Perfect for small gatherings and events.</p>
+            <div class="product-price">₹8,500</div>
+            <div class="product-buttons">
+                <button class="btn btn-primary" onclick="addToCart('Ahuja SPA-1000DP', 8500, 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=250&fit=crop')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="speaker">
+            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop" alt="Zebronics ZEB-6000RUCF" class="product-image">
+            <h3 class="product-name">Zebronics ZEB-6000RUCF</h3>
+            <p class="product-description">Bluetooth tower speaker with karaoke mic, LED lights, and remote control. Great for parties and home use.</p>
+            <div class="product-price">₹6,999</div>
+            <div class="product-buttons">
+                <button class="btn btn-primary" onclick="addToCart('Zebronics ZEB-6000RUCF', 6999, 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="speaker">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Shure SM58 Mic Set" class="product-image">
+            <h3 class="product-name">Shure SM58 Mic Set</h3>
+            <p class="product-description">Professional dynamic microphone with speaker combo. Industry standard for live vocals and performances.</p>
+            <div class="product-price">₹12,500</div>
+            <div class="product-buttons">
+                <button class="btn btn-primary" onclick="addToCart('Shure SM58 Mic Set', 12500, 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop')">Add to Cart</button>
             </div>
         </div>
     </section>
@@ -143,8 +216,96 @@
             <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
         </div>
     </div>
-    <script src="shop.js">
-        
+    
+    <script>
+        // Cart functionality
+        let cart = [];
+        let total = 0;
+
+        function addToCart(name, price, image) {
+            cart.push({name, price, image});
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const totalAmount = document.getElementById('total-amount');
+            
+            cartCount.textContent = cart.length;
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p style="text-align: center; color: #cccccc; margin-top: 50px;">Your cart is empty</p>';
+                totalAmount.textContent = '0';
+                return;
+            }
+            
+            let cartHTML = '';
+            total = 0;
+            
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover;">
+                        <div>
+                            <h4>${item.name}</h4>
+                            <p>₹${item.price}</p>
+                        </div>
+                        <button onclick="removeFromCart(${index})" style="background: red; color: white; border: none; padding: 5px 10px; cursor: pointer;">Remove</button>
+                    </div>
+                `;
+            });
+            
+            cartItems.innerHTML = cartHTML;
+            totalAmount.textContent = total;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function toggleCart() {
+            const cartSidebar = document.getElementById('cart-sidebar');
+            cartSidebar.style.display = cartSidebar.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            alert(`Thank you for your purchase! Total: ₹${total}`);
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    productCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
     </script>
 </body>
 </html>
