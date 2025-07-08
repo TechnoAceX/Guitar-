@@ -284,18 +284,28 @@
         🛒
     </a>
     
-    <button class="float-enquire" onclick="openModal()">
-        🎤 Enquire Now
-    </button>
-    
-    <!-- Modal -->
-    <div id="enquiryModal" class="modal">
+        <!-- Enquire Button -->
+        <button class="float-enquire" onclick="openModal()">
+            🎤 Enquire Now
+        </button>
+
+        <!-- Modal -->
+        <!-- Modal with Google Form -->
+        <div id="enquireModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 style="color: #00f0ff; margin-bottom: 20px; text-align: center;">Enquire Now</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdummy/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc5GaC-vOd9FbaUCyY2HCdx9WPz3oGktvG117KymaVEtlNXMQ/viewform?embedded=true" 
+            width="100%" 
+            height="500" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">
+            Loading…
+            </iframe>
         </div>
-    </div>
+        </div>
+
     
     <script src="app.js"></script>
 </body>
