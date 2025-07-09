@@ -273,7 +273,7 @@
         left: 10px;
         padding: 5px 10px;
         background-color: rgba(0, 0, 0, 0.6);
-        color: #fff;
+        color: #000000;
         font-size: 0.9rem;
         border-radius: 4px;
     }
@@ -603,7 +603,6 @@
         }
         
         .gallery-item::before {
-            content: '🎵';
             position: absolute;
             top: 50%;
             left: 50%;
